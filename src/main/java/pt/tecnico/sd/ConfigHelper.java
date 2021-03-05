@@ -15,11 +15,11 @@ public class ConfigHelper {
 	public ConfigHelper(final String resourcePath) {
 		try {
 			InputStream inputStream = getClass().getClassLoader().getResourceAsStream(resourcePath);	
-	        _properties = new Properties();
-	        _properties.load(inputStream);
-	    } catch (IOException e) {
-	        System.out.printf("Failed to load configuration: %s%n", e);
-	    }
+			_properties = new Properties();
+			_properties.load(inputStream);
+		} catch (IOException e) {
+			System.out.printf("Failed to load configuration: %s%n", e);
+		}
 	}
 
 	/** Lookup properties in default resource path. */
@@ -29,14 +29,14 @@ public class ConfigHelper {
 
 	/** Get property value from loaded properties. */
 	public String getValue(String configName) {
-        String value = _properties.getProperty(configName);
+		String value = _properties.getProperty(configName);
 		return value;
 	}
 
 	/** Print the loaded properties. */
 	public void printProperties() {
-	    // load configuration properties
-        System.out.printf("Loaded %d properties%n", _properties.size());
+		// load configuration properties
+		System.out.printf("Loaded %d properties%n", _properties.size());
 
 		final Enumeration keys = _properties.keys();
 		while (keys.hasMoreElements()) {
