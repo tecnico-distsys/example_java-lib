@@ -1,4 +1,4 @@
-package pt.tecnico.sd;
+package pt.tecnico;
 
 import java.io.IOException;
 import java.io.InputStream;
